@@ -1,0 +1,22 @@
+# Workshop settings read by `vp setup` and `vp check`. One copy per workshop repo.
+[workshop]
+slug = "explore"                      # explore | build | engineer
+title = "Explore: GenAI & Agentic AI Engineering Toolkit"
+python = "3.12"
+
+[check]
+# Python packages that must import inside the project environment
+packages = ["openai", "pydantic", "dotenv", "ipykernel", "langgraph", "chromadb", "fastapi", "uvicorn", "streamlit", "requests"]
+# VS Code extensions (required / nice to have)
+extensions_required = ["ms-python.python", "ms-toolsai.jupyter"]
+extensions_optional = ["github.copilot", "github.copilot-chat"]
+docker = "no"                 # required | optional | no
+
+[ai]
+# Any OpenAI-compatible endpoint: the VithuPro gateway during the workshop, a free tier (Gemini, Groq, GitHub Models) afterwards.
+base_url = "https://ai.vithuproai.com/v1"
+model = "gpt-5.4-nano"
+
+[report]
+# `vp check` sends the result here so VithuPro can see who is ready (no code, files or secrets are sent).
+url = "https://n8n.vithuproai.com/webhook/setup-check"
